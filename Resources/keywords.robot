@@ -15,6 +15,8 @@ Click On Cancel Button
 
 Click On Login Button
     Press Keys                          id=login           RETURN
+Click On Logout Button
+    Press Keys                          id=logout          RETURN
 
 Load Date Selection Page
     Page Should Contain Element         id=questionText
@@ -30,4 +32,7 @@ Page Should Contain Logout/My Page Buttons
 Enter Email And Password
     Input Text                          xpath://*[@id="email"]       ${EMAIL}
     Input Password                      xpath://*[@id="password"]    ${PASSWORD}
+
+End Web Test
+    Close Browser
 

@@ -2,6 +2,8 @@
 Documentation   Basic info about test suite
 Library         SeleniumLibrary
 Resource        ../Resources/keywords.robot
+Test Setup      Open Car Rental Website
+Test Teardown   End Web Test
 
 *** Variables ***
 ${BROWSER}      chrome
@@ -24,7 +26,7 @@ User redirects to date selection page when cancel button is clicked on create a 
 
     Load Date Selection Page
 
-    Close Browser
+    End Web Test
 
 Buttons Login/Create User Changes To Logout/My Page Buttons When Successfully Logged In
 
@@ -40,7 +42,9 @@ Buttons Login/Create User Changes To Logout/My Page Buttons When Successfully Lo
 
     Page Should Contain Logout/My Page Buttons
 
-    Close Browser
+    Click On Logout Button
+
+    End Web Test
 
     # TODO Se över all text för att förtydliga...
-    # TODO Se över Keywords och variabler.
+    # TODO Se över Keywords och variabler. Kategorisera Keywords?
