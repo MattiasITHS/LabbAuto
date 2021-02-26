@@ -14,7 +14,7 @@ ${EMAIL}        tester01@test.se
 *** Test Cases ***
 User redirects to date selection page when cancel button is clicked on create a new user page
 
-    [Documentation]                     Test cancel button on create a new user page
+    [Documentation]                     Test Cancel Button On Create A New User Page
     [Tags]                              Test 1
     Open Car Rental Website
 
@@ -24,7 +24,7 @@ User redirects to date selection page when cancel button is clicked on create a 
 
     Click On Cancel Button
 
-    Load Date Selection Page
+    Date Selection Page Should Contain
 
     End Web Test
 

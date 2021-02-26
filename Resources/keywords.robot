@@ -18,7 +18,7 @@ Click On Login Button
 Click On Logout Button
     Press Keys                          id=logout          RETURN
 
-Load Date Selection Page
+Date Selection Page Should Contain
     Page Should Contain Element         id=questionText
 
 Page Should Contain Login/Create User Buttons
