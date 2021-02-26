@@ -1,12 +1,17 @@
-#*** Settings ***
-#Documentation
-#Library         SeleniumLibrary
-#Resource        ../Resources/keywords.robot
-#
-#
-#*** Variables ***
-#
-#*** Test Cases ***
-#Text
-#    [Documentation]
-#    [Tags]
+*** Settings ***
+Documentation
+Library         SeleniumLibrary
+Resource        ../Resources/keywords.robot
+
+
+*** Variables ***
+
+*** Test Cases ***
+Text
+    [Documentation]
+    [Tags]
+
+    Given
+    When
+    and
+    Then

@@ -1,3 +1,6 @@
+*** Settings ***
+Resource  ../Tests/LabbWebTest.robot
+Resource  ../Tests/VG_test.robot
 *** Keywords ***
 Open Chrome
     Open Browser                        about:blank     ${BROWSER}
