@@ -1,6 +1,8 @@
 *** Keywords ***
-Open Car Rental Website
+Open Chrome
     Open Browser                        about:blank     ${BROWSER}
+
+Go To Car Rental Website
     Go To                               ${URL}
     Wait Until Page Contains            Infotiv Car Rental
 
@@ -32,6 +34,9 @@ Page Should Contain Logout/My Page Buttons
 Enter Email And Password
     Input Text                          xpath://*[@id="email"]       ${EMAIL}
     Input Password                      xpath://*[@id="password"]    ${PASSWORD}
+
+Page Should Contain A Welcome Phrase
+    Page Should Contain Element       id=welcomePhrase
 
 End Web Test
     Close Browser

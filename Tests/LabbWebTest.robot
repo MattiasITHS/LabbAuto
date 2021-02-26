@@ -2,7 +2,7 @@
 Documentation   Basic info about test suite
 Library         SeleniumLibrary
 Resource        ../Resources/keywords.robot
-Test Setup      Open Car Rental Website
+Test Setup      Open Chrome
 Test Teardown   End Web Test
 
 *** Variables ***
@@ -16,7 +16,7 @@ User redirects to date selection page when cancel button is clicked on create a 
 
     [Documentation]                     Test Cancel Button On Create A New User Page
     [Tags]                              Test 1
-    Open Car Rental Website
+    Go To Car Rental Website
 
     Click on Create User Button
 
@@ -26,13 +26,15 @@ User redirects to date selection page when cancel button is clicked on create a 
 
     Date Selection Page Should Contain
 
-    End Web Test
+
+#En Avbryt-knapp som tar användaren till datumvalssidan
+#och en Skapa-knapp som försöker skapa användarkontot med den inmatade informationen.
 
 Buttons Login/Create User Changes To Logout/My Page Buttons When Successfully Logged In
 
     [Documentation]                     Test Buttons Login/Create User Changes To Logout/My Page When Login Successfull
     [Tags]                              Test 2
-    Open Car Rental Website
+    Go To Car Rental Website
 
     Page Should Contain Login/Create User Buttons
 
@@ -40,11 +42,16 @@ Buttons Login/Create User Changes To Logout/My Page Buttons When Successfully Lo
 
     Click On Login Button
 
+    Page Should Contain A Welcome Phrase
+
     Page Should Contain Logout/My Page Buttons
 
     Click On Logout Button
 
-    End Web Test
+
+#Om användaren loggar in framgångsrikt ändras användarinformationsfältet
+#för att visa en välkomstfras med användarnas förnamn och knapparna ändras till Logout,
+#som loggar ut användaren från sessionen och My Page
 
     # TODO Se över all text för att förtydliga...
     # TODO Se över Keywords och variabler. Kategorisera Keywords?
