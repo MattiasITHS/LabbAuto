@@ -1,6 +1,4 @@
-*** Settings ***
-Resource  ../Tests/LabbWebTest.robot
-Resource  ../Tests/VG_test.robot
+
 *** Keywords ***
 Open Chrome
     Open Browser                        about:blank     ${BROWSER}
@@ -43,4 +41,11 @@ Page Should Contain A Welcome Phrase
 
 End Web Test
     Close Browser
+
+I Have Open Chrome
+    Open Browser                        about:blank     ${BROWSER}
+I Have Entered The Webadress
+    Go To                               ${URL}
+The Website Shows
+    Wait Until Page Contains            Infotiv Car Rental
 

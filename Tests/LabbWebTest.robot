@@ -14,8 +14,8 @@ ${EMAIL}        tester01@test.se
 *** Test Cases ***
 User redirects to date selection page when cancel button is clicked on create a new user page
 
-    [Documentation]                     Test Cancel Button On Create A New User Page
-    [Tags]                              Test 1
+    [Documentation]                     Test Cancel Button On Create User Page
+    [Tags]                              krav-Create User
     Go To Car Rental Website
 
     Click on Create User Button
@@ -33,7 +33,7 @@ User redirects to date selection page when cancel button is clicked on create a 
 Buttons Login/Create User Changes To Logout/My Page Buttons When Successfully Logged In
 
     [Documentation]                     Test Buttons Login/Create User Changes To Logout/My Page When Login Successfull
-    [Tags]                              Test 2
+    [Tags]                              krav-Header
     Go To Car Rental Website
 
     Page Should Contain Login/Create User Buttons
