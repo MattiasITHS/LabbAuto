@@ -1,51 +1,33 @@
-
 *** Keywords ***
-Open Chrome
+Start Test
     Open Browser                        about:blank     ${BROWSER}
-
-Go To Car Rental Website
     Go To                               ${URL}
-    Wait Until Page Contains            Infotiv Car Rental
+    Page Should Contain                 Infotiv Car Rental
 
 Click on Create User Button
     Press Keys                          id=createUser      RETURN
-
-Load Create A New User Page
-    Wait Until Page Contains Element    id=questionText
-
+    Page Should Contain                 Create user
 Click On Cancel Button
     Press Keys                          id=cancel          RETURN
+Date Selection Page Shows
+    Page Should Contain                 Infotiv Car Rental
 
 Click On Login Button
-    Press Keys                          id=login           RETURN
-Click On Logout Button
-    Press Keys                          id=logout          RETURN
-
-Date Selection Page Should Contain
-    Page Should Contain Element         id=questionText
-
-Page Should Contain Login/Create User Buttons
     Page Should Contain Button          id=login
-    Page Should Contain Button          id=createUser
+    Press Keys                          id=login           RETURN
 
-Page Should Contain Logout/My Page Buttons
-    Page Should Contain Button          id=logout
-    Page Should Contain Button          id=mypage
 
-Enter Email And Password
+
+Entered My Login Information
+    Page Should Contain Element         id=userInfoTop
     Input Text                          xpath://*[@id="email"]       ${EMAIL}
     Input Password                      xpath://*[@id="password"]    ${PASSWORD}
-
-Page Should Contain A Welcome Phrase
-    Page Should Contain Element       id=welcomePhrase
-
+Login On Website
+    Click On Login Button
+I Get A Welcomephrase
+    Page Should Contain Element                xpath://*[@id="welcomePhrase"]
+Logout
+    Page Should Contain Button          id=logout
+    Press Keys                          id=logout          RETURN
 End Web Test
     Close Browser
-
-I Have Open Chrome
-    Open Browser                        about:blank     ${BROWSER}
-I Have Entered The Webadress
-    Go To                               ${URL}
-The Website Shows
-    Wait Until Page Contains            Infotiv Car Rental
-
